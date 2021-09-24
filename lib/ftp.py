@@ -4,7 +4,7 @@ class FTPScan:
     def __init__(self,verbosity,ip):
         self.verbosity = verbosity
         self.ip = ip
-        self.ftp = FTP(ip)
+        self.ftp = self.FTP(ip)
     
     def anonymous_login(self):
         resp = self.ftp.login()

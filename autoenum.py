@@ -8,6 +8,6 @@ args = parser.parse_args()
 print(args.ip)
 print(args.ports)
 fp = FTPScan(args.ip,args.ports)
-
+fp.anonymous_login()
 if args.verbose:
     print("Output is verbose")

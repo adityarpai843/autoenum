@@ -1,4 +1,3 @@
-from _typeshed import Self
 from ftplib import FTP
 class FTPScan:
 

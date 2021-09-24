@@ -1,7 +1,7 @@
 from ftplib import FTP
 class FTPScan:
 
-    def __init__(self,verbosity,ip):
+    def __init__(self,ip,verbosity):
         self.verbosity = verbosity
         self.ip = ip
         self.ftp = FTP(self.ip)

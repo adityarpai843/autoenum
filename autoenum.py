@@ -7,7 +7,7 @@ parser.add_argument("-v","--verbose",help="make output verbose",action="store_tr
 args = parser.parse_args()
 print(args.ip)
 print(args.ports)
-fp = FTPScan(args.ip,args.ports)
+fp = FTPScan(args.ip)
 fp.anonymous_login()
 if args.verbose:
     print("Output is verbose")

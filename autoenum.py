@@ -5,9 +5,9 @@ parser.add_argument("ip",help="Enter host IP address")
 parser.add_argument("ports", help="Enter the ports separated by comma")
 parser.add_argument("-v","--verbose",help="make output verbose",action="store_true")
 args = parser.parse_args()
-print(args.ip)
-print(args.ports)
-fp = FTPScan(args.ip)
-fp.anonymous_login()
+for port in args.ports:
+    if port == '21':
+        fp = FTPScan(args.ip)
+        fp.anonymous_login()
 if args.verbose:
     print("Output is verbose")

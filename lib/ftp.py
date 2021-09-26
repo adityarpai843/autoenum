@@ -1,4 +1,5 @@
 from ftplib import FTP
+from clint.textui import colored, puts
 class FTPScan:
 
     def __init__(self,ip,verbosity=False):
@@ -9,9 +10,9 @@ class FTPScan:
     def anonymous_login(self):
         resp = self.ftp.login()
         if resp =='230 Login successful.':
-            print("FTP Anonymous Login Allowed !!")
+            puts(colored.red('FTP Anonymous Login Allowed !!'))
         else:
-            print("Failed")     
+            puts(colored.green('FTP Anonymous Login Blocked !!'))     
 
 
 
